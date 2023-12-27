@@ -15,7 +15,7 @@ const TalentCard = ({ product, action, extraStyle, onPress }) => {
   return (
     <TouchableOpacity
       style={[styles.creatorCard, extraStyle, { width: "100%" }]}
-      onPress={() => onPress(item)}
+      onPress={() => onPress(product)}
     >
       <Image source={{ uri: image }} style={styles.avatar} />
       <View style={styles.creatorStat}>
@@ -36,7 +36,7 @@ const TalentCard = ({ product, action, extraStyle, onPress }) => {
       <View style={styles.socialContain}>
         <PrimeButton
           text={`Price:${price}`}
-          onPress={() => action?.onPress()}
+          disabled={true}
           buttonStyle={{
             width: "fit-content",
             height: 38,
