@@ -1,36 +1,39 @@
 {
   "expo": {
-    "name": "i_influence",
-    "slug": "i_influence",
+    "name": "ebony",
+    "slug": "ebony",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "influencer",
+    "scheme": "ebony",
     "icon": "./assets/Layer_2.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/Onboarding.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#6497D6"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "-influence"
+      "bundleIdentifier": "ebony"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#6497D6"
       },
-      "package": "com.jozyhush.i_influence"
+      "package": "com.jozyhush.ebony"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "fc3ab365-269d-4f8e-9957-d0909fe7f1db"
+        "projectId": "b147352f-f18a-4a0a-8b15-4ae75fc2b09b"
       }
-    }
+    },
+    "owner": "jozyhush"
   }
 }

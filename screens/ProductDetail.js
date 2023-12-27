@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Image,
   StyleSheet,
@@ -8,26 +8,23 @@ import {
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import TopNav from "../components/TopNav";
-import { useDispatch } from "react-redux";
 
 const ProductDetail = ({ navigation }) => {
   const { width, height } = useWindowDimensions();
   const route = useRoute();
-  const dispatch = useDispatch();
-  const {} = route.params || {};
 
   const product = route?.params?.product;
 
   return (
     <View style={[(styles.container, styles.light), { height: height }]}>
-      <TopNav prev={true} title={"Details"} />
+      <TopNav prev={true} title={"Product Details"} />
 
       <View style={[styles.boxed]}>
         <Image source={{ uri: product?.image }} style={[styles.creatorImg]} />
 
         <Text style={[styles.creatorName]}>{product?.title}</Text>
         <Text style={[styles.contentType]}>Category:{product?.category}</Text>
-        <Text style={[styles.contentType]}>Price:{product?.price}</Text>
+        <Text style={[styles.contentType]}>Price: ${product?.price}</Text>
       </View>
       <View style={styles.about}>
         <Text style={[styles.description]}>Product Description</Text>

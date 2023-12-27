@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import LabeledInput from "../components/LabeledInput";
-import {
-  Image,
-  StyleSheet,
-  Text,
-  useWindowDimensions,
-  View,
-} from "react-native";
+import { StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import PrimeButton from "../components/PrimeButton";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/actions/auth";
@@ -18,7 +12,6 @@ const Login = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const loginInUser = async () => {
-    // const base64String = encode(payload?.password);
     setIsLoading(true);
     dispatch(
       login(

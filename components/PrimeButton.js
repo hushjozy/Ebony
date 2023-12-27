@@ -67,34 +67,20 @@ const PrimeButton = ({ onPress, text, buttonStyle, textStyle, icon }) => {
     },
   }).duration(2000);
   return (
-    <View
+    <Pressable
+      onPress={() => {
+        onPress();
+        // handlePress();
+      }}
       style={[
         styles.primeBtn,
         buttonStyle,
         // { transform, backgroundColor, color },
       ]}
-      // layout={FadingTransition.duration(1000)}
-      // entering={enteringAnimation}
-      // exiting={exitingAnimation}
     >
-      <Pressable
-        onPress={() => {
-          onPress();
-          // handlePress();
-        }}
-        style={[
-          {
-            width: "fit-content",
-            justifyContent: "center",
-            alignItems: "center",
-          },
-          // styles.primeBtn, buttonStyle
-        ]}
-      >
-        {text && <Text style={[styles.primeBtnText, textStyle]}>{text}</Text>}
-        {icon}
-      </Pressable>
-    </View>
+      {text && <Text style={[styles.primeBtnText, textStyle]}>{text}</Text>}
+      {icon}
+    </Pressable>
   );
 };
 
